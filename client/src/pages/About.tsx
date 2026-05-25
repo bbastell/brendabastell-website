@@ -26,16 +26,11 @@ export default function About() {
               {/* Profile Image */}
               <div className="lg:col-span-1">
                 <div className="sticky top-24">
-                  <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-terracotta/20 to-honey/20 border-2 border-muted flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-muted-foreground text-sm font-medium">
-                        Profile Photo
-                      </div>
-                      <div className="text-muted-foreground text-xs mt-2">
-                        Professional headshot
-                      </div>
-                    </div>
-                  </div>
+                  <img
+                    src="/manus-storage/IMG_9248_cbe576ed.jpeg"
+                    alt="Brenda Bastell"
+                    className="w-full aspect-square rounded-lg object-cover shadow-lg"
+                  />
                 </div>
               </div>
 

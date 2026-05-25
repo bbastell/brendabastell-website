@@ -47,18 +47,13 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right Placeholder Image */}
+              {/* Right Profile Image */}
               <div className="flex items-center justify-center">
-                <div className="w-full aspect-square rounded-lg bg-gradient-to-br from-sage-mist/20 to-sea-glass/20 border-2 border-muted flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-muted-foreground text-sm font-medium">
-                      Hero Image
-                    </div>
-                    <div className="text-muted-foreground text-xs mt-2">
-                      Professional photo coming soon
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/manus-storage/IMG_9248_cbe576ed.jpeg"
+                  alt="Brenda Bastell"
+                  className="w-full aspect-square rounded-lg object-cover shadow-lg"
+                />
               </div>
             </div>
           </div>

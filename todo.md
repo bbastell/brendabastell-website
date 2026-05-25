@@ -29,5 +29,5 @@
 - [x] Fixed nested anchor tags throughout site
 - [x] Updated About page credentials copy
 - [x] Improved error handling for contact form notifications
-- [ ] Save checkpoint before deployment
-- [ ] Deploy to live URL
+- [x] Save checkpoint before deployment
+- [x] Deploy to live URL (Public deployment complete)
