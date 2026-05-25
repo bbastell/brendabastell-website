@@ -92,6 +92,14 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-border pt-8">
+          {/* Disclaimer */}
+          <div className="mb-6 pb-6 border-b border-border">
+            <p className="text-center text-muted-foreground text-xs leading-relaxed max-w-4xl mx-auto">
+              The facilitation services offered by Brenda Bastell are intended for personal growth, self-exploration, and ceremonial purposes only. They do not constitute medical, psychological, or therapeutic treatment and are not a substitute for professional mental health or medical care. Brenda Bastell is not a licensed medical or mental health practitioner. Participation is entirely voluntary and at the individual's own discretion.
+            </p>
+          </div>
+          
+          {/* Copyright */}
           <p className="text-center text-muted-foreground text-sm">
             © {currentYear} Brenda Bastell. All rights reserved.
           </p>
