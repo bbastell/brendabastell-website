@@ -126,12 +126,6 @@ export default function About() {
                     <li className="flex gap-3">
                       <span className="text-accent font-bold">✓</span>
                       <span className="text-muted-foreground">
-                        Trauma-Informed Care Certification
-                      </span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="text-accent font-bold">✓</span>
-                      <span className="text-muted-foreground">
                         Ongoing professional development and supervision
                       </span>
                     </li>
