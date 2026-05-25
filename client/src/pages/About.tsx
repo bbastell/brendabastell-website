@@ -29,7 +29,7 @@ export default function About() {
                   <img
                     src="/manus-storage/IMG_9248_cbe576ed.jpeg"
                     alt="Brenda Bastell"
-                    className="w-full aspect-square rounded-lg object-cover shadow-lg"
+                    className="w-full aspect-square rounded-lg object-cover shadow-lg brightness-110 contrast-105"
                   />
                 </div>
               </div>
