@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,39 +44,47 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Brenda's Earthy Color Palette */
+  --color-sage-mist: #c7ccbf;
+  --color-honey: #d7a958;
+  --color-sea-glass: #9cb6b4;
+  --color-terracotta: #c68d6d;
+  --color-linen: #fff5ea;
+  --color-mocha: #39312d;
+  
+  --primary: #c68d6d; /* Terracotta */
+  --primary-foreground: #fff5ea; /* Linen */
+  --sidebar-primary: #9cb6b4; /* Sea Glass */
+  --sidebar-primary-foreground: #fff5ea; /* Linen */
+  --chart-1: #d7a958; /* Honey */
+  --chart-2: #9cb6b4; /* Sea Glass */
+  --chart-3: #c68d6d; /* Terracotta */
+  --chart-4: #c7ccbf; /* Sage Mist */
+  --chart-5: #39312d; /* Mocha */
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: #fff5ea; /* Linen */
+  --foreground: #39312d; /* Mocha */
+  --card: #ffffff;
+  --card-foreground: #39312d; /* Mocha */
+  --popover: #ffffff;
+  --popover-foreground: #39312d; /* Mocha */
+  --secondary: #9cb6b4; /* Sea Glass */
+  --secondary-foreground: #ffffff;
+  --muted: #c7ccbf; /* Sage Mist */
+  --muted-foreground: #39312d; /* Mocha */
+  --accent: #d7a958; /* Honey */
+  --accent-foreground: #39312d; /* Mocha */
+  --destructive: #c68d6d; /* Terracotta */
+  --destructive-foreground: #fff5ea; /* Linen */
+  --border: #e8e3d9;
+  --input: #f5f1e8;
+  --ring: #d7a958; /* Honey */
+  --sidebar: #fff5ea; /* Linen */
+  --sidebar-foreground: #39312d; /* Mocha */
+  --sidebar-accent: #d7a958; /* Honey */
+  --sidebar-accent-foreground: #39312d; /* Mocha */
+  --sidebar-border: #e8e3d9;
+  --sidebar-ring: #d7a958; /* Honey */
 }
 
 .dark {
@@ -118,7 +127,10 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -173,5 +185,21 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+
+  /* Typography */
+  @layer base {
+    :root {
+      --font-serif: 'Merriweather', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+  }
+
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
   }
 }

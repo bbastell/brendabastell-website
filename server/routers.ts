@@ -2,6 +2,8 @@ import { COOKIE_NAME } from "@shared/const";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
+import { notifyOwner } from "./_core/notification";
+import { z } from "zod";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -17,12 +19,37 @@ export const appRouter = router({
     }),
   }),
 
-  // TODO: add feature routers here, e.g.
-  // todo: router({
-  //   list: protectedProcedure.query(({ ctx }) =>
-  //     db.getUserTodos(ctx.user.id)
-  //   ),
-  // }),
+  contact: router({
+    submit: publicProcedure
+      .input(
+        z.object({
+          name: z.string().min(1, "Name is required"),
+          email: z.string().email("Invalid email address"),
+          message: z.string().min(10, "Message must be at least 10 characters"),
+        })
+      )
+      .mutation(async ({ input }) => {
+        // Send notification to owner
+        try {
+          const notificationSent = await notifyOwner({
+            title: "New Contact Form Submission",
+            content: `Name: ${input.name}\nEmail: ${input.email}\nMessage: ${input.message}`,
+          });
+          
+          if (!notificationSent) {
+            console.warn("[Contact] Owner notification failed, but submission recorded");
+          }
+        } catch (error) {
+          console.error("[Contact] Error sending owner notification:", error);
+          // Continue - don't fail the user's submission if notification fails
+        }
+
+        return {
+          success: true,
+          message: "Thank you for reaching out. I'll be in touch soon.",
+        };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
