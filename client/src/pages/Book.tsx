@@ -112,71 +112,41 @@ export default function Book() {
                   <p className="text-muted-foreground text-sm mb-4">
                     Reach out anytime. I'm here to support your journey.
                   </p>
-                  <a
-                    href="mailto:hello@brendabastell.com"
-                    className="inline-block px-4 py-2 bg-accent hover:bg-accent/90 text-accent-foreground rounded font-medium transition-colors text-sm"
-                  >
-                    Contact Me
-                  </a>
+                  <div className="space-y-2">
+                    <a
+                      href="https://calendly.com/hello-brendabastell/30min"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-4 py-2 bg-accent hover:bg-accent/90 text-accent-foreground rounded font-medium transition-colors text-sm"
+                    >
+                      Schedule Now
+                    </a>
+                    <p className="text-xs text-muted-foreground pt-2">
+                      or email me at{" "}
+                      <a
+                        href="mailto:hello@brendabastell.com"
+                        className="text-accent hover:underline"
+                      >
+                        hello@brendabastell.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
 
               {/* Right Column - Calendly Embed */}
               <div className="lg:col-span-2">
                 <div className="bg-card rounded-lg border border-border overflow-hidden shadow-sm">
-                  {/* Calendly Placeholder */}
-                  <div className="aspect-video md:aspect-auto md:h-screen bg-gradient-to-br from-sage-mist/10 to-sea-glass/10 border-b border-border flex items-center justify-center p-8">
-                    <div className="text-center space-y-4">
-                      <div className="text-4xl font-serif font-bold text-muted-foreground/30">
-                        📅
-                      </div>
-                      <div className="space-y-2">
-                        <h3 className="text-xl font-serif font-bold text-foreground">
-                          Calendly Embed
-                        </h3>
-                        <p className="text-muted-foreground max-w-sm">
-                          Your Calendly scheduling widget will appear here. This placeholder shows where the booking calendar will be integrated.
-                        </p>
-                      </div>
-                      <div className="pt-4 space-y-2">
-                        <p className="text-sm text-muted-foreground">
-                          To integrate Calendly:
-                        </p>
-                        <ol className="text-sm text-muted-foreground space-y-1">
-                          <li>1. Create a Calendly account</li>
-                          <li>2. Set up your availability</li>
-                          <li>3. Get your embed code</li>
-                          <li>4. Replace this placeholder</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Alternative Contact Info */}
-                  <div className="p-8 bg-muted/20 border-t border-border">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      In the meantime, you can reach out directly to schedule:
-                    </p>
-                    <div className="space-y-2">
-                      <p className="font-medium text-foreground">
-                        Email:{" "}
-                        <a
-                          href="mailto:hello@brendabastell.com"
-                          className="text-accent hover:underline"
-                        >
-                          hello@brendabastell.com
-                        </a>
-                      </p>
-                      <p className="font-medium text-foreground">
-                        Phone:{" "}
-                        <a
-                          href="tel:+1234567890"
-                          className="text-accent hover:underline"
-                        >
-                          (123) 456-7890
-                        </a>
-                      </p>
-                    </div>
+                  {/* Calendly Embed */}
+                  <div className="w-full h-full" style={{ minHeight: "600px" }}>
+                    <iframe
+                      src="https://calendly.com/hello-brendabastell/30min?hide_event_type_details=1&hide_gdpr_banner=1"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      style={{ minHeight: "600px" }}
+                      title="Calendly Scheduling"
+                    />
                   </div>
                 </div>
               </div>
