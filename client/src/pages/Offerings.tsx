@@ -2,9 +2,109 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Info } from "lucide-react";
 
 export default function Offerings() {
+  const offerings = [
+    {
+      id: 1,
+      title: "THE FOUNDATION",
+      subtitle: "Mini Psilocybin Session",
+      duration: "1.5 hours",
+      price: "$500",
+      description: "Low-dose introductory psilocybin experience. Entry point for people curious but not ready for a full journey.",
+      includes: [
+        "Brief preparation and intention setting",
+        "Facilitated low-dose journey",
+        "Grounding and integration support",
+        "Professional facilitation in a safe, private space"
+      ],
+      color: "from-honey/20 to-terracotta/20"
+    },
+    {
+      id: 2,
+      title: "THE DEEP DIVE",
+      subtitle: "Full Sacred Medicine Session",
+      duration: "5-6 hours",
+      price: "$2,250",
+      description: "Using psilocybin, MDMA, or combination with IFS (Parts Work), NLP, and Somatic Work.",
+      includes: [
+        "Discovery call to understand your intentions",
+        "Comprehensive preparation session",
+        "5-6 hour facilitated journey",
+        "Integration call 5-10 days later",
+        "Professional facilitation with advanced modalities"
+      ],
+      color: "from-sea-glass/20 to-sage-mist/20"
+    },
+    {
+      id: 3,
+      title: "BREATHWORK SESSION",
+      subtitle: "Conscious Connected Breathing",
+      duration: "60 minutes",
+      price: "$150",
+      description: "Release physical tension and recalibrate your nervous system through guided conscious connected breathing.",
+      includes: [
+        "Personalized breathwork protocol",
+        "60-minute guided session in a calm environment",
+        "Integration discussion and insights",
+        "Take-home practices for daily use",
+        "Ongoing email support between sessions"
+      ],
+      color: "from-terracotta/20 to-honey/20"
+    },
+    {
+      id: 4,
+      title: "THE CATALYST",
+      subtitle: "3-Month Transformation Container",
+      duration: "Ongoing",
+      price: "$3,500",
+      description: "Comprehensive transformation journey combining medicine work, breathwork, and deep integration coaching.",
+      includes: [
+        "1 Full Sacred Medicine Session (5-6 hrs)",
+        "1-2 Mini Psilocybin Sessions (1.5 hrs)",
+        "1 Breathwork Session",
+        "6 bi-weekly integration and coaching sessions (IFS & NLP)",
+        "Text support between sessions"
+      ],
+      color: "from-sage-mist/20 to-honey/20"
+    },
+    {
+      id: 5,
+      title: "THE MASTERWORK",
+      subtitle: "6-Month Transformation Container",
+      duration: "Ongoing",
+      price: "$7,500",
+      description: "Deep, sustained transformation with multiple medicine sessions, breathwork, and intensive coaching over six months.",
+      includes: [
+        "2 Full Sacred Medicine Sessions (5-6 hrs), spaced ~3 months apart",
+        "2-3 Mini Psilocybin Sessions (1.5 hrs)",
+        "2-3 Breathwork Sessions",
+        "12 bi-weekly deep-dive coaching and integration sessions",
+        "Priority scheduling and 24/7 text/Voxer support",
+        "Customized somatic practices for daily application"
+      ],
+      color: "from-terracotta/20 to-sea-glass/20"
+    },
+    {
+      id: 6,
+      title: "FIRE WITHIN RETREAT",
+      subtitle: "Co-facilitated with Andrea Warkentin",
+      duration: "4 days / 3 nights",
+      price: "$1,850",
+      description: "Immersive retreat experience on private acreage outside Edmonton with facilitated medicine journeys and comprehensive support.",
+      includes: [
+        "2 facilitated sacred medicine journeys",
+        "Breathwork session",
+        "Heart-mind exercises and nervous system education",
+        "Nature walks",
+        "All meals and snacks",
+        "$500 non-refundable deposit required"
+      ],
+      color: "from-honey/20 to-sage-mist/20"
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
@@ -17,192 +117,94 @@ export default function Offerings() {
               Offerings
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              Two complementary modalities for deep transformation and healing.
+              Transformational work designed to meet you where you are—from introductory sessions to deep, sustained containers for lasting change.
             </p>
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Discovery Call Note */}
+        <section className="py-8 md:py-12 bg-accent/5 border-b border-accent/20">
+          <div className="container">
+            <div className="flex gap-4 items-start max-w-3xl">
+              <Info className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="text-foreground font-semibold mb-1">
+                  New Clients: Complimentary Discovery Call
+                </p>
+                <p className="text-muted-foreground text-sm">
+                  All new clients start with a complimentary discovery call before booking any medicine-based services. This ensures we're a good fit and allows me to understand your intentions, health history, and readiness.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Offerings Grid */}
         <section className="py-16 md:py-24">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Plant Medicine Facilitation */}
-              <div className="bg-card rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-honey/20 to-terracotta/20 border-b border-border flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-muted-foreground text-sm font-medium">
-                      Service Image
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {offerings.map((offering) => (
+                <div
+                  key={offering.id}
+                  className="bg-card rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className={`h-32 bg-gradient-to-br ${offering.color} border-b border-border flex items-center justify-center`}>
+                    <div className="text-center">
+                      <div className="text-muted-foreground text-xs font-medium uppercase tracking-wide">
+                        {offering.duration}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-8 md:p-10 space-y-6">
+                    <div>
+                      <h2 className="text-xl md:text-2xl font-serif font-bold text-foreground mb-1">
+                        {offering.title}
+                      </h2>
+                      <p className="text-sm text-muted-foreground font-medium mb-3">
+                        {offering.subtitle}
+                      </p>
+                      <p className="text-accent font-bold text-xl">
+                        {offering.price}
+                      </p>
+                    </div>
+
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {offering.description}
+                    </p>
+
+                    <div className="space-y-3">
+                      <h3 className="font-serif font-bold text-foreground text-sm">
+                        Includes:
+                      </h3>
+                      <ul className="space-y-2">
+                        {offering.includes.map((item, idx) => (
+                          <li key={idx} className="flex gap-3">
+                            <span className="text-accent font-bold flex-shrink-0 text-sm">
+                              ✓
+                            </span>
+                            <span className="text-muted-foreground text-sm">
+                              {item}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="border-t border-border pt-6">
+                      <Link href="/book">
+                        <Button
+                          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+                          size="lg"
+                        >
+                          Book Now
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
-
-                <div className="p-8 md:p-10 space-y-6">
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-2">
-                      Plant Medicine Facilitation
-                    </h2>
-                    <p className="text-accent font-semibold text-lg">
-                      Starting at $500 per session
-                    </p>
-                  </div>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    Plant medicine offers a direct pathway to profound insight, healing, and transformation. In a carefully held, professional container, you'll access deeper layers of consciousness to address limiting beliefs, process trauma, and reconnect with your authentic self.
-                  </p>
-
-                  <div className="space-y-3">
-                    <h3 className="font-serif font-bold text-foreground">
-                      What's Included:
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Pre-session consultation and intention setting
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Professional facilitation in a safe, private space
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Grounding and integration support during the experience
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Post-session integration guidance and resources
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Follow-up support for 2 weeks post-session
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-border pt-6">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Plant medicine work requires careful screening and preparation. All clients complete a health questionnaire and consultation before booking.
-                    </p>
-                    <Link href="/book">
-                      <Button
-                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                        size="lg"
-                      >
-                        Book Plant Medicine Session
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Breathwork Sessions */}
-              <div className="bg-card rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-sea-glass/20 to-sage-mist/20 border-b border-border flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-muted-foreground text-sm font-medium">
-                      Service Image
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-8 md:p-10 space-y-6">
-                  <div>
-                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-2">
-                      Breathwork Sessions
-                    </h2>
-                    <p className="text-accent font-semibold text-lg">
-                      Starting at $150 per session
-                    </p>
-                  </div>
-
-                  <p className="text-muted-foreground leading-relaxed">
-                    Breath is the bridge between body and mind. Through guided breathwork, you'll release stored tension, access clarity, and activate your body's natural healing capacity. Breathwork is accessible to everyone and offers immediate, tangible benefits.
-                  </p>
-
-                  <div className="space-y-3">
-                    <h3 className="font-serif font-bold text-foreground">
-                      What's Included:
-                    </h3>
-                    <ul className="space-y-2">
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Personalized breathwork protocol tailored to your needs
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          60-minute guided session in a calm, supportive environment
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Integration discussion and insights
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Take-home practices for daily use
-                        </span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-accent font-bold flex-shrink-0">
-                          ✓
-                        </span>
-                        <span className="text-muted-foreground text-sm">
-                          Ongoing email support between sessions
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="border-t border-border pt-6">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Breathwork is suitable for most people. A brief consultation ensures the practice is right for you.
-                    </p>
-                    <Link href="/book">
-                      <Button
-                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-                        size="lg"
-                      >
-                        Book Breathwork Session
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -217,19 +219,28 @@ export default function Offerings() {
             <div className="max-w-3xl mx-auto space-y-8">
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  How do I prepare for a session?
+                  How do I get started?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Preparation depends on the modality. For plant medicine, you'll receive detailed pre-session guidelines. For breathwork, simply come with an open mind and wear comfortable clothing.
+                  Schedule a complimentary discovery call. We'll discuss your intentions, health history, and which offering is right for you. From there, we'll move into preparation and scheduling.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  Is this work confidential?
+                  What's the difference between the Foundation and Deep Dive?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Absolutely. Your privacy is sacred. Everything shared in our sessions remains confidential and is held with the utmost professionalism.
+                  The Foundation is a low-dose introductory experience (1.5 hours) perfect for people new to plant medicine. The Deep Dive is a full 5-6 hour journey with more intensive medicine and advanced modalities like IFS and somatic work.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif font-bold text-foreground text-lg mb-3">
+                  Are the Transformation Containers right for me?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  If you're committed to deep, sustained change over several months, a container offers the most powerful results. We'll discuss this during your discovery call to see if it's the right fit.
                 </p>
               </div>
 
@@ -238,16 +249,16 @@ export default function Offerings() {
                   Can I do plant medicine if I'm on medication?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  This is an important question. During your consultation, we'll review your full health history, including medications, to ensure safety and efficacy.
+                  This is an important question. During your consultation, we'll review your full health history, including medications, to ensure safety and efficacy. Some medications are compatible; others require careful consideration.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  What if I don't feel anything during a session?
+                  What is the Fire Within Retreat like?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Everyone's experience is unique. Sometimes the most profound work happens subtly. I'll help you recognize and integrate whatever arises.
+                  It's a 4-day immersive experience on private acreage with 2 facilitated medicine journeys, breathwork, nature, education, and all meals included. It's co-facilitated with Andrea Warkentin and designed for deep transformation in community.
                 </p>
               </div>
             </div>
