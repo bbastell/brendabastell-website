@@ -41,12 +41,12 @@ export default function Offerings() {
       id: 3,
       title: "BREATHWORK SESSION",
       subtitle: "Conscious Connected Breathing",
-      duration: "60 minutes",
-      price: "$150",
+      duration: "75 minutes",
+      price: "$125",
       description: "Release physical tension and recalibrate your nervous system through guided conscious connected breathing.",
       includes: [
         "Personalized breathwork protocol",
-        "60-minute guided session in a calm environment",
+        "75-minute guided session in a calm environment",
         "Integration discussion and insights",
         "Take-home practices for daily use",
         "Ongoing email support between sessions"
