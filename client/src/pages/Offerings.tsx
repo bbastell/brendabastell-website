@@ -42,14 +42,17 @@ export default function Offerings() {
       title: "BREATHWORK SESSION",
       subtitle: "Conscious Connected Breathing",
       duration: "75 minutes",
-      price: "$125",
-      description: "Release physical tension and recalibrate your nervous system through guided conscious connected breathing.",
+      price: "$125 - $150",
+      description: "Release physical tension and recalibrate your nervous system through guided conscious connected breathing. Available as private (1-on-1) or semi-private (2-3 people) sessions.",
       includes: [
         "Personalized breathwork protocol",
         "75-minute guided session in a calm environment",
         "Integration discussion and insights",
         "Take-home practices for daily use",
-        "Ongoing email support between sessions"
+        "Ongoing email support between sessions",
+        "",
+        "Private (1-on-1): $125",
+        "Semi-Private (2-3 people): $150 total"
       ],
       color: "from-terracotta/20 to-honey/20"
     },
@@ -179,13 +182,17 @@ export default function Offerings() {
                       </h3>
                       <ul className="space-y-2">
                         {offering.includes.map((item, idx) => (
-                          <li key={idx} className="flex gap-3">
-                            <span className="text-accent font-bold flex-shrink-0 text-sm">
-                              ✓
-                            </span>
-                            <span className="text-muted-foreground text-sm">
-                              {item}
-                            </span>
+                          <li key={idx} className={item === "" ? "h-2" : "flex gap-3"}>
+                            {item !== "" && (
+                              <>
+                                <span className="text-accent font-bold flex-shrink-0 text-sm">
+                                  ✓
+                                </span>
+                                <span className="text-muted-foreground text-sm">
+                                  {item}
+                                </span>
+                              </>
+                            )}
                           </li>
                         ))}
                       </ul>
@@ -219,46 +226,46 @@ export default function Offerings() {
             <div className="max-w-3xl mx-auto space-y-8">
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  How do I get started?
+                  What's included in a discovery call?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Schedule a complimentary discovery call. We'll discuss your intentions, health history, and which offering is right for you. From there, we'll move into preparation and scheduling.
+                  During our discovery call, we'll discuss your intentions, any health considerations, your experience level with these modalities, and what you hope to gain. This helps me determine if we're a good fit and which offering best serves your needs.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  What's the difference between the Foundation and Deep Dive?
+                  How do I prepare for a session?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  The Foundation is a low-dose introductory experience (1.5 hours) perfect for people new to plant medicine. The Deep Dive is a full 5-6 hour journey with more intensive medicine and advanced modalities like IFS and somatic work.
+                  Preparation depends on the type of session. For plant medicine work, I provide detailed preparation guidance during our discovery call. For breathwork, I'll send you simple pre-session instructions to help you arrive grounded and ready.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  Are the Transformation Containers right for me?
+                  What happens after a session?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  If you're committed to deep, sustained change over several months, a container offers the most powerful results. We'll discuss this during your discovery call to see if it's the right fit.
+                  Integration is a crucial part of the work. After any session, I provide guidance on grounding practices and remain available for questions. For medicine sessions, we schedule a follow-up integration call 5-10 days later to process insights and support your ongoing growth.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  Can I do plant medicine if I'm on medication?
+                  Are the containers right for me?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  This is an important question. During your consultation, we'll review your full health history, including medications, to ensure safety and efficacy. Some medications are compatible; others require careful consideration.
+                  The 3-month and 6-month containers are designed for people committed to deep transformation work. They provide ongoing support, multiple modalities, and the consistency needed for lasting change. We'll discuss which option aligns with your goals during your discovery call.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif font-bold text-foreground text-lg mb-3">
-                  What is the Fire Within Retreat like?
+                  Can I do semi-private breathwork with friends?
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  It's a 4-day immersive experience on private acreage with 2 facilitated medicine journeys, breathwork, nature, education, and all meals included. It's co-facilitated with Andrea Warkentin and designed for deep transformation in community.
+                  Yes! Semi-private breathwork sessions are designed for 2-3 people who want to share the experience together. This creates a supportive container while keeping the cost more accessible. The session is still personalized to each participant's needs.
                 </p>
               </div>
             </div>
