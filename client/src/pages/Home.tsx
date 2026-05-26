@@ -81,7 +81,7 @@ export default function Home() {
               {/* Right Profile Image */}
               <div className="flex items-center justify-center">
                 <img
-                  src="/manus-storage/IMG_9248_cbe576ed.jpeg"
+                  src="/brenda-profile.jpeg"
                   alt="Brenda Bastell"
                   className="w-full aspect-square rounded-lg object-cover shadow-lg brightness-110 contrast-105"
                 />

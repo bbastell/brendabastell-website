@@ -27,7 +27,7 @@ export default function About() {
               <div className="lg:col-span-1">
                 <div className="sticky top-24">
                   <img
-                    src="/manus-storage/IMG_9248_cbe576ed.jpeg"
+                    src="/brenda-profile.jpeg"
                     alt="Brenda Bastell"
                     className="w-full aspect-square rounded-lg object-cover shadow-lg brightness-110 contrast-105"
                   />

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Mail, Phone, Facebook } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Contact() {
@@ -33,7 +33,7 @@ export default function Contact() {
     setIsSubmitting(true);
     try {
       // Submit to Formspree endpoint
-      const response = await fetch("https://formspree.io/f/xyzabc123", {
+      const response = await fetch("https://formspree.io/f/hello@brendabastell.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -119,7 +119,7 @@ export default function Contact() {
                   </h2>
                   <div className="flex gap-4">
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/brendabastell"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-muted rounded-lg text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
@@ -128,7 +128,16 @@ export default function Contact() {
                       <Instagram className="w-5 h-5" />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.facebook.com/brendabastell"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-muted rounded-lg text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-5 h-5" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/brendabastell"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-muted rounded-lg text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
