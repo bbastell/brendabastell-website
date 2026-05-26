@@ -6,7 +6,6 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
-import { trpc } from "@/lib/trpc";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,16 +14,6 @@ export default function Contact() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const contactMutation = trpc.contact.submit.useMutation({
-    onSuccess: () => {
-      toast.success("Message sent! I'll be in touch soon.");
-      setFormData({ name: "", email: "", message: "" });
-    },
-    onError: (error) => {
-      toast.error(error.message || "Failed to send message. Please try again.");
-    },
-  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -43,7 +32,27 @@ export default function Contact() {
 
     setIsSubmitting(true);
     try {
-      await contactMutation.mutateAsync(formData);
+      // Submit to Formspree endpoint
+      const response = await fetch("https://formspree.io/f/xyzabc123", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent! I'll be in touch soon.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -206,13 +215,11 @@ export default function Contact() {
 
                     <Button
                       type="submit"
-                      disabled={isSubmitting || contactMutation.isPending}
+                      disabled={isSubmitting}
                       className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
                       size="lg"
                     >
-                      {isSubmitting || contactMutation.isPending
-                        ? "Sending..."
-                        : "Send Message"}
+                      {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
 
