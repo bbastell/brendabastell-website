@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Instagram, Linkedin, Mail, Facebook } from "lucide-react";
+import { Instagram, Mail, Facebook } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -79,15 +79,7 @@ export default function Footer() {
               >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a
-                href="https://www.linkedin.com/in/brendabastell"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-accent transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
+
               <a
                 href="mailto:hello@brendabastell.com"
                 className="text-muted-foreground hover:text-accent transition-colors"

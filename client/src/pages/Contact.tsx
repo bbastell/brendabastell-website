@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, Mail, Phone, Facebook } from "lucide-react";
+import { Instagram, Mail, Phone, Facebook } from "lucide-react";
 import { toast } from "sonner";
 
 export default function Contact() {
@@ -136,15 +136,7 @@ export default function Contact() {
                     >
                       <Facebook className="w-5 h-5" />
                     </a>
-                    <a
-                      href="https://www.linkedin.com/in/brendabastell"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-3 bg-muted rounded-lg text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
-                      aria-label="LinkedIn"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
+
                   </div>
                 </div>
 
