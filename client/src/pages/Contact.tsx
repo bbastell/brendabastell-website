@@ -103,10 +103,10 @@ export default function Contact() {
                       <div>
                         <p className="font-medium text-foreground">Phone</p>
                         <a
-                          href="tel:+1234567890"
+                          href="tel:+17804463814"
                           className="text-accent hover:underline"
                         >
-                          (123) 456-7890
+                          (780) 446-3814
                         </a>
                       </div>
                     </div>
