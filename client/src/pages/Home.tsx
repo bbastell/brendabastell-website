@@ -182,7 +182,7 @@ export default function Home() {
                     className="w-full rounded-lg"
                     autoPlay
                   >
-                    <source src="/manus-storage/IMG_6246_381e54ad.MOV" type="video/quicktime" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663524819532/HkFRcXdlMqfsNMft.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
