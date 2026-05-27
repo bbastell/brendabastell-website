@@ -14,7 +14,7 @@ export default function About() {
               About Brenda
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
-              A grounded guide to transformational healing and personal growth.
+              A grounded guide to deep personal change.
             </p>
           </div>
         </section>
@@ -41,13 +41,13 @@ export default function About() {
                     My Story
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    For over a decade, I've been on a personal journey of healing, growth, and self-discovery. While building a successful career in my primary field, I found myself drawn to deeper work—the kind that addresses not just what we do, but who we are and how we show up in the world.
+                    For over a decade, I've been on a personal journey of self-discovery. While building a 40-year career in real estate investing and a 30-year career as a professional photographer, I found myself drawn to deeper work—the kind that addresses not just what we do, but who we are and how we show up in the world.
                   </p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    My exploration of plant medicine and breathwork began as personal practice and evolved into formal training and certification. I discovered that these modalities, when approached with intention, rigor, and respect, offer profound pathways to clarity, healing, and transformation. What started as a personal practice has become my calling.
+                    My exploration of plant medicine and breathwork began as a personal practice and evolved into formal training and certification. I discovered that when these methods are approached with clear intention and respect, they offer a profound path forward. What started as my own healing process has become my calling.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Today, I hold space for others to access the same depth of insight and healing I've experienced. I bring the same professionalism, integrity, and grounded approach to this work that I've cultivated throughout my career—because transformational work deserves to be both deeply meaningful and rigorously held.
+                    Today, I hold space for others to access that same depth of insight. I bring the same professionalism and grounded approach to this work that I've cultivated throughout my business career. Transformational work deserves to be held safely and taken seriously.
                   </p>
                 </div>
 
@@ -66,7 +66,7 @@ export default function About() {
                           Professionalism & Integrity
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          I approach this work with the same rigor and ethics I bring to every area of my life. Your safety, privacy, and wellbeing are paramount.
+                          Your safety and privacy are my top priorities. I approach this work with the same strong ethics I bring to every area of my life.
                         </p>
                       </div>
                     </li>
@@ -77,7 +77,7 @@ export default function About() {
                           Evidence & Respect
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          I honor both the science and the wisdom traditions behind these practices. I stay current with research while respecting the deeper intelligence of these medicines.
+                          I honor the science behind these practices while respecting their historical roots. I stay current with modern research to ensure a balanced, informed approach.
                         </p>
                       </div>
                     </li>
@@ -126,7 +126,19 @@ export default function About() {
                     <li className="flex gap-3">
                       <span className="text-accent font-bold">✓</span>
                       <span className="text-muted-foreground">
-                        Ongoing professional development and supervision
+                        Internal Family Systems (IFS / Parts Work)
+                      </span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-accent font-bold">✓</span>
+                      <span className="text-muted-foreground">
+                        Neuro-Linguistic Programming (NLP)
+                      </span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="text-accent font-bold">✓</span>
+                      <span className="text-muted-foreground">
+                        Somatic processing and nervous system regulation
                       </span>
                     </li>
                   </ul>
