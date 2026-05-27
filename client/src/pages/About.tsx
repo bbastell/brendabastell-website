@@ -41,16 +41,24 @@ export default function About() {
                     My Story
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    For over a decade, I've been on a personal journey of self-discovery. While building a 40-year career in real estate investing and a 30-year career as a professional photographer, I found myself drawn to deeper work—the kind that addresses not just what we do, but who we are and how we show up in the world.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    My exploration of plant medicine and breathwork began as a personal practice and evolved into formal training and certification. I discovered that when these methods are approached with clear intention and respect, they offer a profound path forward. What started as my own healing process has become my calling.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Today, I hold space for others to access that same depth of insight. I bring the same professionalism and grounded approach to this work that I've cultivated throughout my business career. Transformational work deserves to be held safely and taken seriously.
-                  </p>
-                </div>
-
+                   <p className="text-muted-foreground leading-relaxed mb-4">
+  I spent 40 years in real estate and 30 years behind a camera. I was good at what I did — genuinely good. And for a long time, I thought that was enough.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-4">
+  In 2024, a plant medicine journey changed that. Not because something was broken, but because something was ready. I saw clearly, maybe for the first time, how much of my life I'd been performing instead of living. It cracked something open in me that I couldn't — and didn't want to — close.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-4">
+  That experience led me to a year of formal training and certification in sacred medicine facilitation and breathwork. What started as my own healing became a calling.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-4">
+  Today I hold space for people who are ready to go deeper. I'm not a healer. I'm a guide. You do your own healing — I just make sure you feel safe enough to let it happen.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-4">
+  I bring the same grounded, professional approach to this work that I've built over a lifetime. But I also bring something I didn't used to have: the willingness to be honest about what's real.
+</p>
+<p className="text-muted-foreground leading-relaxed mb-4">
+  <em>Please note: Sacred medicine facilitation is not a substitute for medical or psychological treatment. Always consult a qualified healthcare provider regarding your individual needs.</em>
+</p>
                 <div className="border-t border-border pt-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
                     My Approach
