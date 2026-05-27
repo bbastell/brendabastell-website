@@ -40,7 +40,7 @@ export default function About() {
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
                     My Story
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
+                 
                    <p className="text-muted-foreground leading-relaxed mb-4">
   I spent 40 years in real estate and 30 years behind a camera. I was good at what I did — genuinely good. And for a long time, I thought that was enough.
 </p>
