@@ -58,6 +58,8 @@ export default function About() {
 <p className="text-muted-foreground leading-relaxed mb-4">
   <em>Please note: Sacred medicine facilitation is not a substitute for medical or psychological treatment. Always consult a qualified healthcare provider regarding your individual needs.</em>
 </p>
+                </div>
+
                 <div className="border-t border-border pt-8">
                   <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4">
                     My Approach
