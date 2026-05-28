@@ -27,13 +27,12 @@ export default function Home() {
       type: "video"
     },
     {
-    id:3
+      id: 3,
       name: "Nic",
       excerpt: "Before working with Brenda, I was stuck – going through the motions, carrying old trauma I couldn't name, and watching it show up in how I reacted to everything.",
       full: "Before working with Brenda, I was stuck – going through the motions, carrying old trauma I couldn't name, and watching it show up in how I reacted to everything. I knew something needed to shift, but I couldn't get there on my own.\n\nI'd watched Brenda's own transformation unfold over the years. Whatever she was doing – I wanted that. And in every session, she created this calm, steady space where I felt completely held. The medicine opened things I didn't realize I was still carrying, and Brenda was right there, solid and present, the entire time to help me process.\n\nWhat's surprised me most is what's continued to unfold since. I understand myself differently now. It gave me the clarity to have a conversation with my partner I'd been avoiding for years. It's made me a more present mom. Brenda gave me back parts of myself I didn't know I'd lost – and now that I've found them, I just want to keep going deeper.",
       rating: 5,
       type: "text"
-     
     }
   ];
 
