@@ -19,9 +19,11 @@ export default function Navigation() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo/Brand */}
         <Link href="/">
-          <span className="text-2xl font-serif font-bold text-foreground hover:text-accent transition-colors cursor-pointer">
-            Brenda Bastell
-          </span>
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663524819532/YEzpztfKvnvTdoUF.png"
+            alt="Brenda Bastell"
+            className="h-12 w-auto cursor-pointer"
+          />
         </Link>
 
         {/* Desktop Navigation */}
