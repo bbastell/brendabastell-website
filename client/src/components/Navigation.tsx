@@ -20,7 +20,7 @@ export default function Navigation() {
         {/* Logo/Brand */}
         <Link href="/">
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663524819532/YEzpztfKvnvTdoUF.png"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663524819532/dRNEbjYOFfeapkev.png"
             alt="Brenda Bastell"
             className="h-12 w-auto cursor-pointer"
           />
