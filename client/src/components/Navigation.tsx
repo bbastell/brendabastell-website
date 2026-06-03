@@ -22,7 +22,7 @@ export default function Navigation() {
           <img
             src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663524819532/dRNEbjYOFfeapkev.png"
             alt="Brenda Bastell"
-            className="h-12 w-auto cursor-pointer"
+            className="h-20 w-auto cursor-pointer"
           />
         </Link>
 
